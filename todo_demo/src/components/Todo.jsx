@@ -1,5 +1,8 @@
 import {useState} from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { addTodo, deleteTodo, removeTodo } from "../action/Action";
 const Todo = ()=>{
+const dispatch = useDispatch();
 
     const [inputValue, setInputValue] = useState("")
     return (
@@ -9,7 +12,7 @@ const Todo = ()=>{
         value={inputValue} 
          onChange={(event)=> setInputValue(event.target.value)}
          />
-        <button>Add</button>
+        <button onClick={()=> dispatch(addTodo(inputValue))}>Add</button>
         </>
     )
 }

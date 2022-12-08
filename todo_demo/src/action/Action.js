@@ -9,22 +9,16 @@ export const addTodo  = (data)=>{
     }
 }
 
-export const deleteTodo  = (data)=>{
+export const deleteTodo  = (id)=>{
     return{
         type:"DELETE_TODO",
-        payload:{
-        id: Math.random(),
-        data: data
-        }
+      id
     }
 }
 
-export const removeTodo  = (data)=>{
+export const removeTodo  = ()=>{
     return{
         type:"REMOVE_TODO",
-        payload:{
-        id: Math.random(),
-        data: data
-        }
+     
     }
 }
