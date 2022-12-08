@@ -4,6 +4,8 @@ import { addTodo, deleteTodo, removeTodo } from "../action/Action";
 const Todo = ()=>{
 const dispatch = useDispatch();
 
+const list = useSelector((state)=>state.TodoReducer.list)
+
     const [inputValue, setInputValue] = useState("")
     return (
         <>
@@ -12,7 +14,21 @@ const dispatch = useDispatch();
         value={inputValue} 
          onChange={(event)=> setInputValue(event.target.value)}
          />
-        <button onClick={()=> dispatch(addTodo(inputValue))}>Add</button>
+        <button onClick={()=> dispatch(addTodo(inputValue) ,setInputValue(""))}>Add</button>
+       <div>
+        {
+list.map((elem)=>{
+    return(
+        <>
+        <h4>{elem.data} <button 
+        onClick={()=>dispatch(deleteTodo(elem.id))}>Delete</button></h4>
+        </>
+    )
+})
+        }
+
+        <button onClick={()=> dispatch(removeTodo())}>Remove All</button>
+       </div>
         </>
     )
 }
