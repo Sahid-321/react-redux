@@ -22,6 +22,11 @@ elem.id !== action.id
            ...state.list,
                 list: newData
             }
+
+            case 'REMOVE_ALL':
+                return{
+                    list:[]
+                }
 default: return state
 
     }

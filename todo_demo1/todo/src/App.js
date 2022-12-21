@@ -13,7 +13,7 @@ const  App= ()=> {
     <div className="App">
     <input placeholder='Enter Task'
     value={todoValue} onChange={(event)=> setTodoValue(event.target.value)} />
-  <button onClick={()=>dispatch(addTodo(todoValue))} >ADD TODO</button>
+  <button onClick={()=>dispatch(addTodo(todoValue), setTodoValue(''))} >ADD TODO</button>
    
    {
     list.map((elem)=>{
