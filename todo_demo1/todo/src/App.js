@@ -19,11 +19,12 @@ const  App= ()=> {
     list.map((elem)=>{
       return(
         <div key={elem.id}>
-        <h3>{elem.data}</h3>
+        <h3>{elem.data} <button onClick={()=> dispatch(deleteTodo(elem.id))}>Delete</button></h3>
         </div>
       )
     })
    }
+   <button onClick={()=> dispatch(removeAll())}>Remove All</button>
     </div>
   );
 }
