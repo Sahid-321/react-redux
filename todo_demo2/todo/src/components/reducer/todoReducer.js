@@ -13,6 +13,10 @@ list:[...state.list, {
 data:data
 }]
         }
+
+     default: return state;
+
+
 }
 
 }
