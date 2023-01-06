@@ -1,3 +1,22 @@
-export const addTodo = "ADD_TODO"
-export const deleteTodo = "DELETE_TODO"
-export const remove = "REMOVE"
+export const addTodo = (data)=>{
+    return{
+        type: "ADD_TODO",
+        payload:{
+            id: Math.random(),
+            data:data
+        }
+    }
+    
+}
+export const deleteTodo = ()=>{
+    return{
+        type: "DELETE_TODO"
+    }
+    
+}
+export const remove = ()=>{
+    return{
+        type: "REMOVE"
+    }
+    
+}
