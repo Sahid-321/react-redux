@@ -8,7 +8,7 @@ const  App= ()=> {
   const dispatch = useDispatch();
    const list = useSelector((state)=> state.TodoReducer.list)
   const [todoValue, setTodoValue] = useState('')
-  console.log(todoValue);
+  console.log(list);
   return (
     <div className="App">
     <input placeholder='Enter Task'

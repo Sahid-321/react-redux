@@ -4,8 +4,9 @@ import {useDispatch, useSelector} from "react-redux"
 
 const Home = ()=>{
     const dispatch = useDispatch();
+    const list  = useSelector((stat)=> stat.TodoReducer.list)
     const [data, setData] = useState('')
-    
+    console.log(list);
     return(
         <div>
 <h1>Add todo</h1>
