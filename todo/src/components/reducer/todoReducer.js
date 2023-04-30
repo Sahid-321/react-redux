@@ -13,6 +13,7 @@ switch(action.type){
                 ...state.list,{
                     id: id,
                 data: data
+                
                 }
                 
             ]

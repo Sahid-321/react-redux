@@ -1,10 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import TodoMain from './components/TodoMain';
+import Home from './component/Home';
 
 function App() {
-  return <TodoMain/>
-   
+  return <Home/>
 }
 
 export default App;

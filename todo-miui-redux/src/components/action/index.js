@@ -15,8 +15,8 @@ export const deleteTodo = (id)=>{
     }
 }
 
-export const removeAll = ()=>{
-    return {
-        type:'REMOVE_ALL'
-    }
-}
+// export const removeAll = ()=>{
+//     return {
+//         type:'REMOVE_ALL'
+//     }
+// }
